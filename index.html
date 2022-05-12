@@ -16,6 +16,9 @@
     <!-- Link externo -->
     <link rel="stylesheet" href="css/estilo.css">
 
+    <!-- Inserindo bxslider-->
+    <link rel="stylesheet" href="plugins/bxslider/jquery.bxslider.css">
+
 </head>
 <body>
     <!-- Iniciando área de cabeçalho-->
@@ -43,7 +46,7 @@
         </div>
     </header>
 
-    <!-- Àrea de conteúdo principal -->
+    <!-- Àrea de conteúdo principal 
     <main>
         <section class="destaque">
             <div>
@@ -51,10 +54,12 @@
                 <p>A porta de entrada para o desenvolvimento web.</p>
             </div>
         </section>
+        -->
 
         <!-- Slider -->
         <section class="slider">
-
+            <div><img src="imagens/slide1.jpg" alt="Desenvolvimento"></div>
+            <div><img src="imagens/slide2.jpg" alt="Técnico"></div>
         </section>
 
         <!-- Área de conteúdo de texto + 3 imagens-->
@@ -90,8 +95,16 @@
         <p>Simplicity é um site fictício desenvolvido no Senac Penha &copy; - Alguns Direitos Reservados - 2022</p>
     </footer>
 
-
-
-    
+    <!-- bxslider -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="plugins/bxslider/jquery.bxslider.js"></script>
+ 
+    <!-- Iniciando o slider-->
+    <script>
+    $(document).ready(function(){
+    $('.slider').bxSlider();
+    });
+    </script>
+   
 </body>
 </html>
