@@ -111,17 +111,16 @@ h2 a {
     background-image: url(../imagens/fundo-destaque.jpg);
     height: 90vh;
     color: white;
-    background-size: cover;
+    background-size: cover; /* cobre a tela inteira mesmo diminuindo a tela*/
     background-attachment: fixed;
-    text-align: center;
-
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
 .destaque h2 {
-    font-size: clamp(2rem, 8vw, 7rem);  /* clamp(min, ideal, max); */
+    font-size: clamp(2rem, 8vw, 7rem); /* clamp (min, ideal, max) */
     animation-name: fadeIn;
     animation-duration: 1.5s;
 }
@@ -155,7 +154,6 @@ figure {
     margin: 1rem 0;
 }
 
-
 .historia {
     background-image: url(../imagens/fundo-madeira.jpg);
     background-attachment: fixed;
@@ -171,11 +169,11 @@ figure {
 
 iframe {
     width: 100%;
-    border: none;
+    border: none; /* tira borda do vídeo*/
 }
 
-.historia iframe { 
-    max-width: 800px; 
+.historia iframe {
+    max-width: 800px;
 }
 
 footer {
@@ -289,15 +287,116 @@ input:not([type="radio"]):not([type="checkbox"]), select,
 
 
 
-/* Media queries */
+/* Media Queries*/
+
 @media screen and (min-width: 600px) {
-    .icone { 
-        display:  none;
+.icone {display: none;}
+
+.menu {
+display: flex;
+justify-content: space-between;}
+
+.menu a {
+    padding: 0 1rem;
+}
+}
+
+@media screen and (min-width: 800px) {
+html {
+    font-size: 18px;
+}
+
+header .limitador{
+    height: 15vh;
+}
+
+.destaque {
+    height: 85vh;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
+
+
+
+
+
+
+
+*, *::after, *::before {
+    box-sizing: border-box;
     }
 
     .menu {
         display: flex;
         justify-content: space-between;
+        height: 10vh;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .limitador {
+        max-width: 1100px;
+        width: 95vw;
+        margin: auto;
+    }
+    
+    .menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        /*display: none;*/ /* ocultou o menu*/
+
+
+
+
+
+        /*
+    }
+
+
+
+    nav {
+
+        width: 65%;
+    }
+    
+    nav h2 {
+        text-align: right;
+    }
+
+    .icone {
+        font-size: 1.2rem;
         padding: 1rem;
     }
 
@@ -320,7 +419,4 @@ input:not([type="radio"]):not([type="checkbox"]), select,
         height: 85vh; 
     }
 }
-
-
-
 
